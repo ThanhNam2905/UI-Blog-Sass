@@ -1,0 +1,23 @@
+@import '../Abstracts/mixin';
+
+
+section.about {
+    background-color: $color-gray-light;
+    margin-top: -35rem;
+    padding: 27rem 15rem;
+
+    .about-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        align-items: flex-start;
+
+        .about-content {
+            flex: 1 1 40rem;
+        }
+
+        .about-images {
+            flex: 1 1 40rem;
+        }
+    }
+}

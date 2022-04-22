@@ -1,0 +1,26 @@
+
+@mixin grid($value) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+    gap: 2rem;
+}
+
+@mixin title-text($sizeTitle) {
+    font-size: $sizeTitle;
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+}
+
+@mixin graph-text($sizeGraph) {
+    font-size: $sizeGraph;
+    margin: 1rem 0;
+    color: $color-black;
+    line-height: 1.8;
+}
+
+@mixin flex__wrap($gap) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    align-items: center;
+}
