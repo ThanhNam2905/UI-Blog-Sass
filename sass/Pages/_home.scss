@@ -21,3 +21,53 @@ section.about {
         }
     }
 }
+
+section.skills {
+    margin-top: -16%;
+    padding: 26rem 15rem;
+
+    background: linear-gradient(to right bottom, 
+        rgba($color-primary-light, 0.8),
+        rgba(225, 195, 200, 0.847), 
+        rgba($color-primary-dark, 0.9))
+        , url(../../images/background2.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-clip-path: ellipse(60% 43% at 50% 50%);
+    clip-path: ellipse(60% 43% at 50% 50%);
+
+    .skill-container {
+        @include grid(20rem);
+        gap: 4rem;
+
+        .skill-box {
+            width: 100%;
+            padding: 5rem 2rem;
+            text-align: center;
+            background-color: $color-gray-light;
+            border-radius: 3rem;
+            opacity: 0.85;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0 0.5rem 1.3rem rgba($color-black, 0.9);
+                transform: translateY(-2.5rem) scale(1.013);
+            }
+
+            &__icon {
+                font-size: 6rem;
+                color: $color-primary;
+            }
+
+            .paragraph {
+                @include graph-text(1.6rem);
+                line-height: 1.65;
+            }
+        }
+    }
+
+
+
+}
