@@ -155,10 +155,9 @@ body {
   margin: 1.5rem 0;
   text-transform: uppercase;
   font-weight: 800;
-  text-transform: uppercase;
-  text-align: center;
   letter-spacing: 0.3rem;
   cursor: pointer;
+  display: inline-block;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(142, 158, 252, 0.3)), to(#0b2ef3)) !important;
   background-image: linear-gradient(to right, rgba(142, 158, 252, 0.3), #0b2ef3) !important;
   color: transparent !important;
@@ -201,6 +200,35 @@ body {
           animation: moveInBottom 1s ease-in-out 1.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777777;
+  font-weight: 700;
+}
+
+.btn--white:hover {
+  -webkit-box-shadow: 0 1rem 2rem rgba(51, 51, 51, 0.6);
+          box-shadow: 0 1rem 2rem rgba(51, 51, 51, 0.6);
+}
+
+.btn--blue {
+  background-color: #5a73fc;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1.8rem 4rem;
+}
+
+.btn--blue::after {
+  background-color: #5a73fc !important;
+}
+
+.btn--blue:hover {
+  -webkit-box-shadow: 0.2rem 0.5rem 1rem rgba(90, 115, 252, 0.8);
+          box-shadow: 0.2rem 0.5rem 1rem rgba(90, 115, 252, 0.8);
 }
 
 .btn::after {
@@ -303,8 +331,8 @@ section.about .about-container .about-images {
 section.skills {
   margin-top: -16%;
   padding: 26rem 15rem;
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(142, 158, 252, 0.8)), color-stop(rgba(225, 195, 200, 0.847)), to(rgba(11, 46, 243, 0.9))), url(../../images/background2.jpg);
-  background: linear-gradient(to right bottom, rgba(142, 158, 252, 0.8), rgba(225, 195, 200, 0.847), rgba(11, 46, 243, 0.9)), url(../../images/background2.jpg);
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(142, 158, 252, 0.8)), color-stop(rgba(104, 203, 245, 0.655)), to(rgba(11, 46, 243, 0.9))), url(../../images/background2.jpg);
+  background: linear-gradient(to right bottom, rgba(142, 158, 252, 0.8), rgba(104, 203, 245, 0.655), rgba(11, 46, 243, 0.9)), url(../../images/background2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -351,12 +379,59 @@ section.skills .skill-container .skill-box .paragraph {
   line-height: 1.65;
 }
 
+section.courses {
+  background-color: #f7f7f7;
+  margin-top: -16%;
+  padding: 26rem 15rem;
+}
+
+section.courses .courses-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  gap: 5rem;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
 .m-bottom__5 {
   margin-bottom: 5rem;
 }
 
 .m-bottom__2 {
   margin-bottom: 2rem;
+}
+
+.m-top__1 {
+  margin-top: 1rem;
+}
+
+.m-top__2 {
+  margin-top: 2rem;
+}
+
+.m-top__4 {
+  margin-top: 4rem;
+}
+
+.m-top__5 {
+  margin-top: 5rem;
+}
+
+.m-top__7 {
+  margin-top: 7rem;
+}
+
+.m-top__8 {
+  margin-top: 8rem;
+}
+
+.m-top__10 {
+  margin-top: 10rem;
 }
 
 .conposition {
@@ -405,5 +480,194 @@ section.skills .skill-container .skill-box .paragraph {
 .conposition__img--3 {
   top: 15rem;
   left: 5rem;
+}
+
+.card {
+  -webkit-perspective: 100rem;
+          perspective: 100rem;
+  position: relative;
+  height: 45rem;
+}
+
+.card__side {
+  color: #777777;
+  font-size: 2rem;
+  height: 45rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  border-radius: 3rem;
+  text-align: center;
+  -webkit-box-shadow: 0 1.5rem 3rem rgba(51, 51, 51, 0.3);
+          box-shadow: 0 1.5rem 3rem rgba(51, 51, 51, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__side--front {
+  background-color: #fff;
+}
+
+.card__side--front .card__img {
+  width: 100%;
+  height: 24rem;
+  background-blend-mode: screen;
+}
+
+.card__side--front .card__img--1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 185, 0, 0.9)), to(#ff7730)), url(../../images/involve1.jpg);
+  background-image: linear-gradient(to right, rgba(255, 185, 0, 0.9), #ff7730), url(../../images/involve1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: ellipse(82% 60% at 50% 35%);
+  clip-path: ellipse(82% 60% at 50% 35%);
+}
+
+.card__side--front .card__img--2 {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(142, 158, 252, 0.9)), to(#0b2ef3)), url(../../images/involve2.jpg);
+  background-image: linear-gradient(to right, rgba(142, 158, 252, 0.9), #0b2ef3), url(../../images/involve2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: ellipse(82% 60% at 50% 35%);
+  clip-path: ellipse(82% 60% at 50% 35%);
+}
+
+.card__side--front .card__img--3 {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(85, 197, 122, 0.9)), to(#08a06d)), url(../../images/involve3.jpg);
+  background-image: linear-gradient(to right, rgba(85, 197, 122, 0.9), #08a06d), url(../../images/involve3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: ellipse(82% 60% at 50% 35%);
+  clip-path: ellipse(82% 60% at 50% 35%);
+}
+
+.card__side--front .card__heading {
+  position: absolute;
+  top: 40%;
+  right: 7%;
+}
+
+.card__side--front .card__heading--1 span {
+  background-blend-mode: screen;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.6)), to(#ff7730));
+  background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.6), #ff7730);
+}
+
+.card__side--front .card__heading--2 span {
+  background-blend-mode: screen;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(142, 158, 252, 0.6)), to(#0b2ef3));
+  background: linear-gradient(to right bottom, rgba(142, 158, 252, 0.6), #0b2ef3);
+}
+
+.card__side--front .card__heading--3 span {
+  background-blend-mode: screen;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(85, 197, 122, 0.6)), to(#08a06d));
+  background: linear-gradient(to right bottom, rgba(85, 197, 122, 0.6), #08a06d);
+}
+
+.card__side--front .card__heading span {
+  background-blend-mode: screen;
+  display: block;
+  padding: 0.6rem 2rem;
+  font-size: 3rem;
+  border-radius: 4rem;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: -1rem;
+}
+
+.card__side--front .card__content {
+  padding: 0 7rem;
+}
+
+.card__side--front .card__content p {
+  padding-bottom: 0.7rem;
+  border-bottom: 0.1rem solid rgba(119, 119, 119, 0.25);
+}
+
+.card__side--front .card__content .rating {
+  padding-top: 0.3rem;
+  font-size: 1.6rem;
+  color: #ffb900;
+}
+
+.card__side--front .card__content .rating__span {
+  color: #777777;
+  margin-left: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.card__side--back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card__side--back-1 {
+  background: -webkit-gradient(linear, left top, right top, from(#ffb900), to(#ff7730));
+  background: linear-gradient(90deg, #ffb900, #ff7730);
+}
+
+.card__side--back-2 {
+  background: -webkit-gradient(linear, left top, right top, from(#8e9efc), to(#0b2ef3));
+  background: linear-gradient(90deg, #8e9efc, #0b2ef3);
+}
+
+.card__side--back-3 {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(85, 197, 122, 0.9)), to(#08a06d));
+  background: linear-gradient(90deg, rgba(85, 197, 122, 0.9), #08a06d);
+}
+
+.card__side--back .card__box {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.card__side--back .card__box .card__title {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 200;
+}
+
+.card__side--back .card__box .card__price {
+  font-size: 6.5rem;
+  margin: 1rem 0;
+  color: #333;
+  line-height: 1.8;
+  color: #fff;
+  font-weight: lighter;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+
+.card__side--back .card__box .btn--card {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.9rem 5rem;
+}
+
+.card:hover .card__side--front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
 }
 /*# sourceMappingURL=main.css.map */
