@@ -1,16 +1,21 @@
 @import '../sass/Abstracts/variables';
+@import '../sass/Abstracts/mixin';
+
 @import '../sass/Base/animation';
 @import '../sass/Base/base';
 @import '../sass/Base/typography';
-@import '../sass/Components/buttons';
-@import '../sass/Layout/header';
-@import '../sass/Abstracts/mixin';
-
-@import '../sass/Pages/home';
 @import '../sass/Base/utilities';
+
 @import '../sass/Components/composition';
 @import '../sass/Components/card';
 @import '../sass/Components/testimonials';
 @import '../sass/Components/bg-video';
 @import '../sass/Components/enroll-form';
 @import '../sass/Components/form-group';
+@import '../sass/Components/buttons';
+
+@import '../sass/Layout/header';
+@import '../sass/Layout/footer';
+
+@import '../sass/Pages/home';
+
