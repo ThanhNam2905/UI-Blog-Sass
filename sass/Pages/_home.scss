@@ -72,10 +72,15 @@ section.skills {
 section.courses {
     background-color: $color-gray-light;
     margin-top: -16%;
-    padding: 26rem 15rem;
+    padding: 26rem 15rem 13rem;
 
     .courses-container {
         @include grid(30rem);
         gap: 5rem;
     }
+}
+
+section.testimonials {
+    padding: 5rem 10rem 13rem;
+    position: relative;
 }

@@ -59,7 +59,15 @@
     }
 }
 
-.btn-text {
+.btn--text {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    i.fa-right-long {
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
 
     &:link, 
     &:visited {
