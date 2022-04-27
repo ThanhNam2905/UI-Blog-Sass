@@ -10,4 +10,16 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.4);
     padding: 5rem 7rem;
 
+    // Responsive Design
+    @include responsive(tablet-medium) {
+        padding: 3rem 4rem;
+    }
+    @include responsive(mobile) {
+        padding: 2rem 4rem 4rem;
+        background-image: 
+            linear-gradient(to right,
+            rgba($color-white, 0.8) 0%), 
+            rgba($color-white, 0.8) 100% 
+            url(../../images/background3.jpg);
+    }
 }

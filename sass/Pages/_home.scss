@@ -1,8 +1,8 @@
 @import '../Abstracts/mixin';
 
 
-section.about {
-    background-color: $color-gray-light;
+.about {
+    background-color: $color-gray-light !important;
     margin-top: -35rem;
     padding: 27rem 15rem;
 
@@ -12,19 +12,74 @@ section.about {
         gap: 3rem;
         align-items: flex-start;
 
+        // Responsive Design
+        @include responsive(tablet-large) {
+            gap: 1.5rem;
+        }
+
         .about-content {
             flex: 1 1 40rem;
+
+            // Responsive Design
+            @include responsive(PC) {
+                flex: 1 1 50rem;
+                width: 100%;
+            }
         }
 
         .about-images {
-            flex: 1 1 40rem;
+            flex: 1 1 45rem;
+
+            // Responsive Design
+            @include responsive(PC) {
+                flex: 1 1 50rem;
+            }
         }
+    }
+
+    // Responsive Design
+    @include responsive(desktop-large) {
+        padding: 25rem 7rem 75rem;
+        margin-top: -37rem;
+    }
+    @include responsive(PC) {
+        padding: 30rem 5rem 65rem;
+        margin-top: -40rem;
+    }
+    @include responsive(tablet-large) {
+        padding: 25rem 4rem 62rem;
+        margin-top: -36rem;
+    }
+    @include responsive(tablet-medium) {
+        padding: 27rem 4rem 60rem;
+        margin-top: -38rem;
+    }
+    @include responsive(mobile) {
+        padding: 24rem 3rem 45rem;
     }
 }
 
-section.skills {
+.skills {
     margin-top: -16%;
     padding: 26rem 15rem;
+
+    // Responsive Design
+    @include responsive(desktop-large) {
+        margin-top: -25%;
+        padding: 30rem 7rem;
+    }
+    @include responsive(PC) {
+        margin-top: -33%;
+        padding: 30rem 5rem;
+    }
+    @include responsive(tablet-large) {
+        margin-top: -18%;
+        padding: 20rem 4rem;
+    }
+    @include responsive(mobile) {
+        margin-top: -47%;
+        padding: 25rem 3rem;
+    }
 
     background: linear-gradient(to right bottom, 
         rgba($color-primary-light, 0.8),
@@ -38,9 +93,26 @@ section.skills {
     -webkit-clip-path: ellipse(60% 43% at 50% 50%);
     clip-path: ellipse(60% 43% at 50% 50%);
 
+    // Responsive Design
+    @include responsive(desktop-large) {
+        -webkit-clip-path: ellipse(75% 42% at 50% 50%);
+        clip-path: ellipse(75% 42% at 50% 50%);
+    }
+
+    @include responsive(tablet-large) {
+        -webkit-clip-path: ellipse(82% 48% at 50% 48%);
+        clip-path: ellipse(82% 48% at 50% 48%);
+    }
+    @include responsive(tablet-medium) {
+        clip-path: ellipse(88% 43% at 50% 49%);
+    }
+    @include responsive(mobile) {
+        clip-path: ellipse(115% 43% at 50% 50%);
+    }
+
     .skill-container {
         @include grid(20rem);
-        gap: 4rem;
+        gap: 3rem;
 
         .skill-box {
             width: 100%;
@@ -65,28 +137,100 @@ section.skills {
                 @include graph-text(1.6rem);
                 line-height: 1.65;
             }
+
+            // Responsive Design
+            @include responsive(tablet-medium) {
+                width: 70%;
+                margin: 0 auto;
+                margin-bottom: 2rem;
+            }
+        }
+
+        // Responsive Design
+        @include responsive(PC) {
+            @include grid(29rem);
         }
     }
 }
 
-section.courses {
+.courses {
     background-color: $color-gray-light;
     margin-top: -16%;
     padding: 26rem 15rem 13rem;
 
-    .courses-container {
+    &__container {
         @include grid(30rem);
         gap: 5rem;
+        
+        // Responsive Design
+        @include responsive(tablet-large) {
+            gap: 3rem;
+        }
+    }
+
+    &__buy {
+        // Responsive Design
+        @include responsive(tablet-large) {
+            margin: 6rem 0 !important;
+        }
+    }
+
+    // Responsive Design
+    @include responsive(desktop-large) {
+        padding: 7rem;
+    }
+    @include responsive(PC) {
+        margin-top: -30%;
+        padding: 23rem 5rem 15rem;
+    }
+    @include responsive(tablet-large) {
+        padding: 30rem 4rem 15rem;
+        margin-top: -35%;
+    }
+    @include responsive(tablet-medium) {
+        padding: 25rem 4rem 10rem;
+        margin-top: -40%;
+    }
+    @include responsive(mobile) {
+        padding: 20rem 3rem 5rem;
+        margin-top: -65%;
     }
 }
 
-section.testimonials {
+.testimonials {
     padding: 5rem 10rem 13rem;
     position: relative;
+
+    // Responsive Design
+    @include responsive(desktop-large) {
+        padding: 7rem;
+    }
+    @include responsive(PC) {
+        padding: 3rem 5rem;
+    }
+    @include responsive(tablet-large) {
+        padding: 3rem 4rem;
+    }
+    @include responsive(mobile) {
+        padding: 3rem;
+    }
 }
 
-section.enroll-now {
+.enroll-now {
     padding: 10rem 16rem;
     background: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
   
+    // Responsive Design
+    @include responsive(desktop-large) {
+        padding: 9rem 7rem;
+    }
+    @include responsive(PC) {
+        padding: 7rem 5rem;
+    }
+    @include responsive(tablet-large) {
+        padding: 6rem 4rem;
+    }
+    @include responsive(mobile) {
+        padding: 3rem;
+    }
 }

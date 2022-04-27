@@ -3,10 +3,11 @@
     perspective: 100rem;
     position: relative;
     height: 45rem;
+
     &__side {
         color: $color-gray;
         font-size: 2rem;
-        height: 45rem;
+        height: 100%;
         transition: all 1s ease;
         border-radius: 3rem;
         text-align: center;
@@ -196,5 +197,12 @@
         }
     }
 
-    
+    // Responsive Design
+    @include responsive(tablet-medium) {
+        width: 70%;
+        margin: 0 auto;  
+    }
+    @include responsive(mobile) {
+        width:85%;  
+    }
 }

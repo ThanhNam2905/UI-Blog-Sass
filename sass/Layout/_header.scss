@@ -12,4 +12,15 @@
     background-position: center;
     -webkit-clip-path: ellipse(68% 78% at 49% 2%);
     clip-path: ellipse(68% 78% at 49% 2%);
+
+    // Responsive Design
+    @include responsive(tablet-large) {
+        -webkit-clip-path: ellipse(65% 52% at 50% 25%);
+        clip-path: ellipse(65% 52% at 50% 25%);
+    }   
+
+    @include responsive(tablet-medium) {
+        -webkit-clip-path: ellipse(68% 78% at 49% 2%);
+        clip-path: ellipse(75% 48% at 50% 25%);
+    }
 }

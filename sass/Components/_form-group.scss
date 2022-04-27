@@ -15,6 +15,13 @@ input[type=number] {
     &__group {
         &:not(:last-child) {
             margin-bottom: 2.5rem;
+
+            @include responsive(tablet-large) {
+                margin-bottom: 1.5rem;
+            }
+            @include responsive(tablet-medium) {
+                margin-bottom: 1rem;
+            }
         }   
     }
 
@@ -49,6 +56,13 @@ input[type=number] {
             } 
         }
         
+        // Responsive Design
+        @include responsive(PC) {
+            width: 80%;
+        }
+        @include responsive(tablet-large) {
+            width: 100%;
+        }
     }
 
     &__label {
