@@ -13,8 +13,9 @@
         height: 6.5rem;
         box-shadow: 0 0.5rem 1rem rgba($color-black, 0.7);
         border-radius: 50%;
-        text-align: center;
-        line-height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: $color-white;
         cursor: pointer;
 
@@ -26,7 +27,18 @@
                 transform: translateY(-0.12rem);
             }
         }
-        
+
+        // Responsive Design
+        @include responsive(tablet-large) {
+            top: 5rem;
+            right: 4rem;
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+        @include responsive(mobile) {
+            top: 3.5rem;
+            right: 2.5rem;
+        }
     }
 
     &__icon {
@@ -39,7 +51,7 @@
             height: 0.3rem;
             border-radius: 0.5rem;
             display: inline-block;
-            background-color: rgba($color-primary, 0.8);
+            background-color: rgba($color-black, 0.8);
             transition: all 0.35s ease-in-out;
         }
 
@@ -69,6 +81,18 @@
         border-radius: 50%;
         background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         transition: transform 0.9s ease-in-out;
+
+        // Responsive Design
+        @include responsive(tablet-large) {
+            top: 5rem;
+            right: 4rem;
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+        @include responsive(mobile) {
+            top: 3.5rem;
+            right: 2.5rem;
+        }
     }
 
     &__navbar {
@@ -90,6 +114,11 @@
 
         &:not(:last-child) {
             margin-bottom: 1.5rem;
+
+            // Responsive Design
+            @include responsive(tablet-large) {
+                margin-bottom: 0.5rem;
+            }
         }
     }
 
@@ -106,6 +135,12 @@
                 $color-green-light 0%, $color-yellow-light 50%, transparent 50%);
             background-size: 252%;
             transition: all 0.5s;
+            border-radius: 5rem;
+
+            // Responsive Design
+            @include responsive(tablet-large) {
+                padding: 0.5rem 2rem;
+            }
         }
 
         &:hover, 

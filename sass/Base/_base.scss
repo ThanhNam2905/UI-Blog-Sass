@@ -12,8 +12,30 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+
+    // Responsive Design
+    @include responsive(desktop-large) {
+        font-size: 65%;
+    }
+    @include responsive(tablet-large) {
+        font-size: 58%;
+    }
+    @include responsive(tablet-medium) {
+        font-size: 54.5%;
+    }
+    @include responsive(mobile) {
+        font-size: 49.5%;
+    }
 }
 
 body {
     padding: 4rem;
+
+    // Responsive Design
+    @include responsive(PC) {
+        padding: 2rem;
+    }
+    @include responsive(tablet-large) {
+        padding: 0px;
+    }
 }

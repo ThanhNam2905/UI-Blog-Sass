@@ -25,24 +25,62 @@
             box-shadow: 0 0.8rem 1.2rem $color-primary-light;
         }
 
-        
-
         &--1 {
             top: 0;
             left: 0;
-            
         }
 
         &--2 {
             top: 5rem;
-            right: -2rem;
-            
+            right: -2rem; 
+
+            // Responsive Design
+            @include responsive(PC) {
+                right: 16rem;
+            }
+            @include responsive(tablet-large) {
+                right: 16.5rem;
+            }
+            @include responsive(tablet-medium) {
+                right: 12rem;
+            }
+            @include responsive(mobile) {
+                right: 1rem;
+                top: 4rem;
+            }
         }
 
         &--3 {
             top: 15rem;
-            left: 5rem;
-            
+            left: 5rem;  
+
+            // Responsive Design
+            @include responsive(PC) {
+                top: 17rem; 
+            }
+            @include responsive(tablet-large) {
+                top: 16rem; 
+                left: 6rem;
+            }
+            @include responsive(tablet-medium) {
+                top: 13rem; 
+                left: 6rem;
+            }
+            @include responsive(mobile) {
+                top: 10rem; 
+                left: 5rem;
+            }
+        }
+
+        // Responsive Design
+        @include responsive(PC) {
+            width: 43%;
+        }
+        @include responsive(tablet-medium) {
+            width: 45%;
+        }
+        @include responsive(mobile) {
+            width: 55%;
         }
     }
 }

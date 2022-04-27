@@ -24,3 +24,25 @@
     gap: $gap;
     align-items: center;
 }
+
+// Responsive Design
+@mixin responsive ($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (max-width: 450px) { @content };
+    }
+    @if $breakpoint == tablet-medium {
+        @media (max-width: 640px) { @content };
+    }
+    @if $breakpoint == tablet-large {
+        @media (max-width: 768px) { @content };
+    }
+    @if $breakpoint == PC {
+        @media (max-width: 990px) { @content };
+    }
+    @if $breakpoint == desktop-large {
+        @media (max-width: 1220px) { @content };
+    }
+    @if $breakpoint == desktop-2xl {
+        @media (min-width: 1880px) { @content };
+    }
+}

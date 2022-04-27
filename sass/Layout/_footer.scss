@@ -3,17 +3,36 @@
     padding: 6rem 15rem;
     background-color: $color-gray_dark;
 
+    // Responsive Design
+    @include responsive(desktop-large) {
+        padding: 7rem;
+    }
+    @include responsive(PC) {
+        padding: 5rem;
+    }
+    @include responsive(tablet-large) {
+        padding: 4rem;
+    }
+    @include responsive(mobile) {
+        padding: 3rem;
+    }
+
     &__logo {
         display: flex;
         flex-flow: column;
         align-items: center;
 
         &-img {
-            width: 14rem;
-            height: 14rem;
+            width: 18rem;
             display: block;
             object-fit: cover;
+
+            // Responsive Design
+            @include responsive(tablet-large) {
+                width: 14rem;
+            }
         }
+
 
         .heading__2 {
             margin-top: 1rem;
@@ -21,9 +40,22 @@
     }
 
     &__container {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        padding-bottom: 6rem;
+
+        // Responsive Design
+        @include responsive(PC) {
+            padding-bottom: 9rem;
+        }
+        @include responsive(tablet-large) {
+            margin-top: 1rem !important;
+            padding-bottom: 10rem;
+        }
+        @include responsive(tablet-medium) {
+            padding-bottom: 11rem;
+        }
+        @include responsive(mobile) {
+            padding-bottom: 15rem;
+        }
     }
 
     &__list {
@@ -62,9 +94,20 @@
         }
     }
     
+    &__navigation {
+        display: inline-block;
+        
+        // Responsive Design
+        @include responsive(tablet-large) {
+            display: block;
+            width: 100%;
+        }
+    }
 
     &__copyright {
-        width: 38%;
+        width: 40%;
+        
+        float: right;
         
         .paragraph {
             border-top: 0.15rem solid $color-white;
@@ -72,6 +115,13 @@
             margin: 0;
             color: $color-white;
             font-size: 1.5rem;
+        }
+
+        // Responsive Design
+        @include responsive(tablet-large) {
+            display: block;
+            width: 100%;
+            margin-top: 2.5rem;
         }
     }
 }
